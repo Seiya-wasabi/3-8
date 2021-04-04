@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-get 'todolists/new'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-get 'top' => 'homes#top'
-post 'todolists' => 'todolists#create'
-# todolists URLをリクエストして、todolistsコントローラーのクリエイトアクションの呼び出し
-get 'todolists' => 'todolists#index'
-get 'todolists/:' => 'todolists#show', as: 'todolist'
-end
+  get 'todolists/new'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'top' => 'homes#top'
+  post 'todolists' => 'todolists#create'
+  get 'todolists' => 'todolists#index'
+  # .../todolists/1 や .../todolists/3 に該当する
+  get 'todolists/:id' => 'todolists#show', as: 'todolist'
+  end
