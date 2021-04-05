@@ -4,4 +4,7 @@
   <!-- <span><%= list.title %></span> を削除して、以下コードに変更 -->
   <span>
     <%= link_to list.title, "/todolists/#{list.id}" %>
-  </span><% end %>
+  </span>
+  <p>画像</p>
+  <%= attachment_image_tag list, ;image, :fill,100, 100, fotmat: 'jpeg' %>
+  <% end %>
